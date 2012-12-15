@@ -1,32 +1,43 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/linearLayout1" >
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="82dp"
+            android:text="@string/txt_main"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <fragment
+            android:id="@+id/splashFragment"
+            android:name="fi.jyu.ties425.androidtest.SplashFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content" />
 
-            <RatingBar
-                android:id="@+id/ratingBar1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        <fragment
+            android:id="@+id/listFragment"
+            android:name="fi.jyu.ties425.androidtest.ListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-		    <RatingBar
-		        android:id="@+id/ratingBar2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content" />
+        <fragment
+            android:id="@+id/mainFragment"
+            android:name="fi.jyu.ties425.androidtest.MainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         </LinearLayout>
-    </ScrollView>
 
-
-</RelativeLayout>
+</LinearLayout>
