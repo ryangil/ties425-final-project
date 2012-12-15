@@ -31,7 +31,7 @@ public class MainActivity extends FragmentActivity implements LocationWait {
 
         GpsTracker tracker = new GpsTracker(this.getApplicationContext());
         tracker.notifyWhenReady(this, tracker);
-        tracker.addLocationSubscriber((ListFragment)fragments.get(R.id.listFragment));
+        GpsTracker.addLocationSubscriber((ListFragment)fragments.get(R.id.listFragment));
     }
 
     @Override

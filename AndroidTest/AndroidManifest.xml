@@ -23,9 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <uses-library android:name="com.google.android.maps" />Intent myIntent = new Intent(view.getContext(), Activity2.class);
-                startActivityForResult(myIntent, 0);    <string name="title_activity_main">Geo Track</string>
-                
+        <uses-library android:name="com.google.android.maps" />
         <activity android:label="@string/title_activity_map" android:name=".MapMainActivity"></activity>
     </application>
 

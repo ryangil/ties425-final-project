@@ -20,8 +20,8 @@ import android.util.Log;
 public class GpsTracker extends Service implements LocationListener {
 	 
     private final Context mContext;
-    private final ArrayList<LocationSubscriber> subs = new ArrayList<LocationSubscriber>();
-	private ArrayList<Location> locations = new ArrayList<Location>();
+    private final static ArrayList<LocationSubscriber> subs = new ArrayList<LocationSubscriber>();
+	private final static ArrayList<Location> locations = new ArrayList<Location>();
  
     // flag for GPS status
     boolean isGPSEnabled = false;
@@ -231,9 +231,9 @@ public class GpsTracker extends Service implements LocationListener {
 
 	}
  
-	public void addLocationSubscriber(LocationSubscriber sub)
+	public static void addLocationSubscriber(LocationSubscriber sub)
 	{
-		this.subs.add(sub);
+		subs.add(sub);
 	}
 	
 	public void removeLocationSubscriber(LocationSubscriber sub)
@@ -241,7 +241,7 @@ public class GpsTracker extends Service implements LocationListener {
 		this.subs.remove(sub);
 	}
 	
-	public ArrayList<Location> getLocations()
+	public static ArrayList<Location> getLocations()
 	{
 		return locations;
 	}
